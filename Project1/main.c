@@ -3,10 +3,10 @@
 void main()
 {
 	// nhap 1 ki tu bat ki, hien ki tu do o he 10, 16
-	//short ran = 0;
-	//printf("nhap vao ki tu bat ki: ");
-	//scanf_s("%c", &ran);
-	//printf("ki tu he 10: %d\nki tu he 16: %x", ran, ran);
+	short ran = 0;
+	printf("nhap vao ki tu bat ki: ");
+	scanf_s("%c", &ran);
+	printf("ki tu he 10: %d\nki tu he 16: %x", ran, ran);
 
 	//bai2: nhap 2 so nguyen a, b
 	//in ra tong, hieu, tich, thuong cho moi dong
