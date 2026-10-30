@@ -3,45 +3,25 @@
 
 void main()
 {
-	//giai pt bac 2 ax^2 + bx +c = 0 voi a, b, c
-	//tinh delta = b^2 - 4ac
-	//delta > 0 pt co 2 nghiem x1 = (-b +sqrt(delta))/2a, x2 = (-b -sqrt(delta))/2a
-	//delta = 0 pt co 1 nghiem x = -b/2a
-	//delta < 0 pt vo nghiem
+	//in bang cuu chuong tu 2 den 9
+	//for (int i = 2; i <= 9; i++)
+	//{
+	//	for (int j = 1; j <= 9; j++)
+	//	{
+	//		printf("%d x %d = %d\n", i, j, i * j);
+	//	}
+	//	printf("\n");
+	//}
 
-	int a = 0;
-	int	b = 0;
-	int c = 0;
-	int delta = 0;
-
-	printf("giai pt bac 2\n");
-	printf("nhap a: ");
-	while (a == 0)
+	//yc: nguoi dung nhap tu ban phim so tu nhien n
+	//tinh va in ra giai thua n
+	int n = 0;
+	int gt_n = 1;
+	printf("nhap so tu nhien n:"); scanf_s("%d", &n);
+	for (int i = 1;i <= n; i++)
 	{
-		scanf_s("%d", &a);
-		if (a == 0)
-		{
-			printf("a khong dc = 0\n");
-			printf("nhap a: ");
-		}
+		gt_n *= i;
 	}
-	printf("nhap b: ");
-	scanf_s("%d", &b);
 
-	printf("nhap c: ");
-	scanf_s("%d", &c);
-
-	delta = pow(b, 2) + 4 * a * c;
-	if (delta > 0)
-	{
-		printf("pt co 2 nghiem:\n");
-		printf("x1 = %.2f\n", (float)-b + sqrt(delta) / (2 * a));
-		printf("x2 = %.2f", (float)-b - sqrt(delta) / (2 * a));
-	}
-	else if (delta == 0)
-	{
-		printf("pt co 1 nghiem:");
-		printf("x = %d", -b / (2 * a));
-	}
-	else printf("pt vo nghiem");
+	printf("giai thua cua %d = %d", n, gt_n);
 }
