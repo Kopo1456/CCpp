@@ -3,90 +3,139 @@
 
 void main()
 {
-	//tinh tien gui ngan hang sau n nam
-	//de bai:nhap vao so tien gui ban dau, tien lai moi nam va so nam gui tien
-	//hay tinh so tien nhan duoc sau n nam (lai tinh theo lai kep)
-	//biet lai hien tai cua viettinbank la 8.2%/nam
-
-	//int tien_gui = 0;
-	//float tien_lai_nam = 0;
-	//int so_nam_gui = 0;
-
-	//printf("nhap so tien gui:"); scanf_s("%d", &tien_gui);
-	//printf("nhap so nam gui tien:"); scanf_s("%d", &so_nam_gui);
-	//printf("nhap tien lai moi nam:"); scanf_s("%f", &tien_lai_nam);
-
-	//int so_tien_nhan_duoc = tien_gui;
-	//for (int i = 0; i < so_nam_gui; i++)
+	//6) tim uoc chung lon nhat cua 2 so nguyen
+	
+	//int a = 0;
+	//int b = 0;
+	//int UCLN = 1;
+	//printf("nhap so nguyen a: "); scanf_s("%d", &a);
+	//printf("nhap so nguyen b: "); scanf_s("%d", &b);
+	//
+	//for (int i = 1; i <= a && i <= b; i++)
 	//{
-	//	so_tien_nhan_duoc = so_tien_nhan_duoc + (so_tien_nhan_duoc * (tien_lai_nam / 100));
-	//	printf("tien nhan duoc sau %d nam: %d\n", i, so_tien_nhan_duoc);
-	//}
-
-
-	//nhap vao so bat ky kiem tra so do co phai la so nguyen to hay khong
-	//int num = 0;
-	//int kiem_tra = 1;
-	//printf("nhap vao so bat ky:"); scanf_s("%d", &num);
-
-	//if (num < 2)
-	//{
-	//	printf("so khong hop le!\n");
-	//}
-	//else if (num == 2)
-	//{
-	//	printf("2 la so nguyen to");
-	//}
-	//else
-	//{
-	//	for (int i = 2; i < num / 2; i++)
+	//	if (a % i == 0 && b % i == 0)
 	//	{
-	//		if (num % i == 0)
+	//		UCLN = i;
+	//	}
+	//}
+	//printf("Uoc chung lon nhat cua 2 so la: %d", UCLN);
+
+	//8) boi chung nho nhat cua 2 so nguyen
+
+	//int a = 0;
+	//int b = 0;
+	//int BCNN = 1;
+	//printf("nhap so nguyen a: "); scanf_s("%d", &a);
+	//printf("nhap so nguyen b: "); scanf_s("%d", &b);
+	//
+	//for (int i = 1; i <= a * b; i++)
+	//{
+	//	if (i % a == 0 && i % b == 0)
+	//	{
+	//		BCNN = i;
+	//		break;
+	//	}
+	//}
+	//printf("Uoc chung lon nhat cua 2 so la: %d", BCNN);
+
+
+	//9) mo phong tra tien may atm
+
+	//int so_tien_nhap = 1;
+	//while (so_tien_nhap % 50000 != 0)
+	//{
+	//	printf("nhap so tien rut: "); scanf_s("%d", &so_tien_nhap);
+	//	if (so_tien_nhap % 50000 != 0)
+	//	{
+	//		printf("so tien khong la boi 50000, xin hay nhap lai!!\n");
+	//	}
+	//}
+
+	//int so_tien_con_lai = so_tien_nhap;
+	//char step = 1;
+	//char count_50 = 0;
+	//char count_100 = 0;
+	//char count_200 = 0;
+	//char count_500 = 0;
+	//while (step != 5)
+	//{
+	//	switch (step)
+	//	{
+	//	case 1:
+	//		if (so_tien_con_lai - 50000 >= 0)
 	//		{
-	//			kiem_tra = 0;
-	//			break;
+	//			so_tien_con_lai -= 50000;
+	//			count_50++;
+	//			step = 2;
 	//		}
-	//	}
-
-	//	if (kiem_tra)
-	//	{
-	//		printf("%d la so nguyen to", num);
-	//	}
-	//	else
-	//	{
-	//		printf("%d khong la so nguyen to", num);
+	//		else if (so_tien_con_lai == 0)
+	//		{
+	//			step = 5;
+	//		}
+	//		break;
+	//	case 2:
+	//		if (so_tien_con_lai - 100000 >= 0)
+	//		{
+	//			so_tien_con_lai -= 100000;
+	//			count_100++;
+	//			step = 3;
+	//		}
+	//		else if (so_tien_con_lai == 0)
+	//		{
+	//			step = 5;
+	//		}
+	//		else
+	//		{
+	//			step = 3;
+	//		}
+	//		break;
+	//	case 3:
+	//		if (so_tien_con_lai - 200000 >= 0)
+	//		{
+	//			so_tien_con_lai -= 200000;
+	//			count_200++;
+	//			step = 4;
+	//		}
+	//		else if (so_tien_con_lai == 0)
+	//		{
+	//			step = 5;
+	//		}
+	//		else
+	//		{
+	//			step = 4;
+	//		}
+	//		break;
+	//	case 4:
+	//		if (so_tien_con_lai - 500000 >= 0)
+	//		{
+	//			so_tien_con_lai -= 500000;
+	//			count_500++;
+	//			step = 1;
+	//		}
+	//		else if (so_tien_con_lai == 0)
+	//		{
+	//			step = 5;
+	//		}
+	//		else
+	//		{
+	//			step = 1;
+	//		}
+	//		break;
+	//	default:
+	//		step = 5;
+	//		break;
 	//	}
 	//}
+	//printf("so tien tra:\n");
+	//printf("%d x 50000\n", count_50);
+	//printf("%d x 100000\n", count_100);
+	//printf("%d x 200000\n", count_200);
+	//printf("%d x 500000\n", count_500);
+	
+	//nhap so nguyen a, b in ra ket qua tich phan ham f(x)
 
-	//in ra cac so nguyen to nho hon n
-	//de bai nhap vao mot so tu nhien n bat ky
-	int n = 0;
-	printf("nhap n: "); scanf_s("%d", &n);
+	int a = 0;
+	int b = 0;
 
-	if (n < 2)
-	{
-		printf("khong co so nguyen to nao nho hon n\n");
-	}
-	else
-	{
-		printf("cac so nguyen to la: ");
-		for (int i = 2; i <= n; i++)
-		{
-			int kiem_tra_so_nguyen_to = 1;
-			for (int j = 2; j <= i / 2; j++)
-			{
-				if (i % j == 0)
-				{
-					kiem_tra_so_nguyen_to = 0;
-					break;
-				}
-			}
 
-			if (kiem_tra_so_nguyen_to)
-			{
-				printf("%d ", i);
-			}
-			
-		}
-	} 
 }
